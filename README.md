@@ -1,2 +1,2 @@
 # aplicativo
-aplicativo desenvolvido para culinária 
+aplicativo desenvolvido culinária 
