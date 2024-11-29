@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Receita Culinária</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Aplicativo de Receita Culinária</h1>
+        </header>
+
+        <main>
+            <section class="add-recipe-form">
+                <h2>Adicionar Receita</h2>
+                <form id="recipeForm" onsubmit="addRecipe(event)">
+                    <label for="recipeName">Nome da Receita</label>
+                    <input type="text" id="recipeName" placeholder="Nome da Receita" required>
+                    
+                    <label for="recipeIngredients">Ingredientes</label>
+                    <textarea id="recipeIngredients" placeholder="Ingredientes (separados por vírgula)" required></textarea>
+                    
+                    <label for="recipeInstructions">Instruções de Preparo</label>
+                    <textarea id="recipeInstructions" placeholder="Instruções de Preparo" required></textarea>
+                    
+                    <button type="submit">Adicionar Receita</button>
+                </form>
+            </section>
+
+            <section class="search-recipe">
+                <h2>Buscar Receita</h2>
+                <label for="searchTerm">Buscar pelo nome:</label>
+                <input type="text" id="searchTerm" placeholder="Digite o nome da receita" oninput="searchRecipe()">
+            </section>
+
+            <section class="recipe-list">
+                <h2>Lista de Receitas</h2>
+                <ul id="recipeDisplay" aria-live="polite"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
